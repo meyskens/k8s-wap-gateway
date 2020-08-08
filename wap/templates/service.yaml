@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "wap.fullname" . }}
+  labels:
+    {{- include "wap.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: wap
+      protocol: UDP
+      name: wap
+  selector:
+    {{- include "wap.selectorLabels" . | nindent 4 }}
