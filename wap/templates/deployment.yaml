@@ -30,6 +30,9 @@ spec:
             - name: wap
               containerPort: 9200
               protocol: UDP
+            - name: wss
+              containerPort: 9201
+              protocol: UDP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

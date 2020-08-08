@@ -7,9 +7,13 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+    - port: 9200
       targetPort: wap
       protocol: UDP
       name: wap
+    - port: 9201
+      targetPort: wss
+      protocol: UDP
+      name: wss
   selector:
     {{- include "wap.selectorLabels" . | nindent 4 }}

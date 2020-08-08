@@ -13,6 +13,6 @@ Kannel is quite old software and is an interpreter, if security alerts don't sta
 Do not run this next to any trusted services, and only use this with strict firewall rules set. You're exposing a proxy service after all. 
 
 ## Deployment
-This repo comes with a Helm chart and a Dockerfile. The chart will set up the proxy server as a NodePort+Loadbalancer service, you might need to put the correct forwards in place as the WSP port is hardcoded in all WAP phones to UDP 9200, if you have a loadbalancer make sure it supports UDP.
+This repo comes with a Helm chart and a Dockerfile. The chart will set up the proxy server as a NodePort+Loadbalancer service, you might need to put the correct forwards in place as the WSP port is hardcoded in all WAP phones to UDP 9200/9201, if you have a loadbalancer make sure it supports UDP.
 
 **If these words mean nothing to you this repo is not for you.*
