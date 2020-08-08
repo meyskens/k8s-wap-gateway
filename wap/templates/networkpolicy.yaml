@@ -14,7 +14,7 @@ spec:
   - to:
     {{- range .Values.allowedCIDRs }}
     - ipBlock:
-        cidr: - {{ . | quote }}
+        cidr: {{ . | quote }}
     {{- end }}
     ports:
     - protocol: TCP
