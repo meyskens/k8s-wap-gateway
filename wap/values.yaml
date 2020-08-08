@@ -13,7 +13,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 service:
-  type: NodePort
+  type: LoadBalancer
   port: 9200
 
 resources: {}
@@ -36,4 +36,4 @@ affinity: {}
 
 allowedCIDRs:
   - 172.217.20.78/32 # Google WAP
-  - 10.0.0.10/32 # My ingress
+  - 64.227.76.12/32 # My ingress
