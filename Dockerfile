@@ -4,4 +4,6 @@ RUN apt-get update && apt-get install -y kannel curl
 
 COPY bearerbox.conf /etc/kannel
 
-CMD [ "bearerbox", "-v", "1", "/etc/kannel/bearerbox.conf" ]
+COPY start.sh /start.sh
+
+CMD [ "/start.sh" ]
